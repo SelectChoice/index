@@ -1,22 +1,28 @@
 import { Box, Button } from "@chakra-ui/react";
+
 import { useNavigate } from "react-router-dom";
+import { Category } from "../organisms/Category";
+
+// import images
+import OmutsuImg from "../images/omutsuirasutoya.png";
+import BabycarImg from "../images/babycarirasutoya.png";
 
 // import Youtube from "react-youtube";
 
 const babyItems = [
     {
-        name: "Diapers",
-        path: "diapers"
+        id: 0,
+        imageName: OmutsuImg,
+        categoryName: "Diapers",
+        path: "/omutsu"
     },
     {
-        name: "Baggies",
-        path: "baggies"
+        id: 1,
+        imageName: BabycarImg,
+        categoryName: "Baby Car",
+        path: "/babycar"
     },
-    {
-        name: "Strings",
-        path: "strings"
-    }
-  ];
+];
 
 export const Baby = () => {
     const navigate = useNavigate();
@@ -26,17 +32,27 @@ export const Baby = () => {
             <Box textAlign="center" fontSize="lg" mt="100px">
                 BABY Goods
             </Box>
-            <Box w="20vw" m="20px">
+
+            {babyItems.map((item) => (
+                <Category
+                    id={item.id}
+                    imageName={item.imageName}
+                    categoryName={item.categoryName}
+                    onClick={() => navigate(item.path)}
+                />
+              ))}
+
+            {/* <Box w="20vw" m="20px">
             {babyItems.map((item) => (
                 <label>
                     <Box mt="10px" ml="10px">
                         <Button colorScheme="blue" variant="ghost" onClick={() => navigate(item.path)}>
-                            {item.name}
+                            {item.categoryName}
                         </Button>
                     </Box>
                 </label>
               ))}
-            </Box>
+            </Box> */}
             
             {/* <Youtube videoId="Ypx_A6No600" /> */}
         </>

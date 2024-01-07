@@ -27,6 +27,7 @@ function App() {
     <ChakraProvider theme={theme}>
       <TopHeader />
       {/* <Flex> */}
+        {/* Githubpageにあげるときはbasename={process.env.PUBLIC_URL}が必要 */}
         <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Routes>
             <Route path={`/`} element={<Home />} />
