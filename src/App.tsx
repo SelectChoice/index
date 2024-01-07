@@ -1,25 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react"
+import {
+  ChakraProvider,
+  Box,
+  Text,
+  Link,
+  VStack,
+  Code,
+  Grid,
+  theme,
+  Image,
+  Flex,
+  Button,
+  Icon,
+  Heading,
+  Center,
+} from "@chakra-ui/react"
+
+import { TopHeader } from "./components/TopHeader";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ChakraProvider theme={theme}>
+      <TopHeader />
+      <Flex w="100vW" h="100wh">
+        TEST
+      </Flex>
+    </ChakraProvider>
   );
 }
 
