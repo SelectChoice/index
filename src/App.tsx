@@ -28,7 +28,7 @@ function App() {
       <TopHeader />
       {/* <Flex> */}
         {/* Githubpageにあげるときはbasename={process.env.PUBLIC_URL}が必要 */}
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <BrowserRouter>
           <Routes>
             <Route path={`/`} element={<Home />} />
             <Route path={`/baby`} element={<Baby />} />
