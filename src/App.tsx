@@ -17,13 +17,16 @@ import {
 } from "@chakra-ui/react"
 
 import { TopHeader } from "./components/TopHeader";
+import { MainIcons } from "./components/MainPage";
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
       <TopHeader />
       <Flex w="100vW" h="100wh">
-        TEST
+        <Box mt="100px">
+          <MainIcons /> 
+        </Box>
       </Flex>
     </ChakraProvider>
   );
