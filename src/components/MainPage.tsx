@@ -1,4 +1,4 @@
-import { Flex, Box, Button, Icon} from "@chakra-ui/react";
+import { Flex, Box, Button, Icon, Input } from "@chakra-ui/react";
 import { FaBaby, FaBath } from "react-icons/fa";
 import { FaTent, FaPencil } from "react-icons/fa6";
 import { GiForkKnifeSpoon } from "react-icons/gi";
@@ -37,10 +37,11 @@ export const MainIcons = () => {
     // icon
     return (
         <>
+        <Input placeholder='Future Function' mt={2} mb={2} ml={2} />
         {useIcons.map((item) => (
             <>
                     {/* <Button variant="ghost" onClick={() => navigate(item.path)}> */}
-            <Icon as={item.icon} w={20} h={20} mr={10}/>
+            <Icon as={item.icon} w={20} h={20} ml={2} mr={10}/>
                     {/* Show name */}
             </>
         ))}
