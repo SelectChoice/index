@@ -16,19 +16,26 @@ import {
   Center,
 } from "@chakra-ui/react"
 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Baby } from "./routes/Baby";
+
 import { TopHeader } from "./components/TopHeader";
-import { MainIcons } from "./components/MainPage";
+import { Home } from "./components/MainPage";
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
       <TopHeader />
-      <Flex w="100vW" h="100wh">
-        <Box mt="100px">
-          <MainIcons /> 
-        </Box>
-      </Flex>
+      {/* <Flex> */}
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
+          <Routes>
+            <Route path={`/`} element={<Home />} />
+            <Route path={`/baby`} element={<Baby />} />
+          </Routes>
+        </BrowserRouter>
+      {/* </Flex> */}
     </ChakraProvider>
+
   );
 }
 
