@@ -5,12 +5,12 @@ type Props = {
   id: number;
   imageName: any; //.pngから取っている画像の名前
   productName: string; //どのカテゴリーかを示す。オムツとかベビーカーとか
-  onClick: (videoUrl: string) => void; //onClickがなくてもOKなので?
+  // onClick: (videoUrl: string) => void; //onClickがなくてもOKなので?
 };
 
 // memo化する
 export const DiaperDiscription: FC<Props> = memo((props) => {
-  const { id, imageName, productName, onClick } = props;
+  const { id, imageName, productName } = props;
   return (
     <Box
       w="260px"

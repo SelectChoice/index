@@ -1,4 +1,4 @@
-import { Box, Button } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 
 import { useNavigate } from "react-router-dom";
 import { DiaperDiscription } from "../organisms/DiaperDiscription";
@@ -15,19 +15,24 @@ const diaperItems = [
         id: 0,
         imageName: PampersImg,
         productName: "Pampers",
-        path: "/"
+        url: "https://www.youtube.com/watch?v=i1LUeyn9Kng"
     },
     {
         id: 1,
         imageName: MoonyImg,
         productName: "Moony",
-        path: "/"
+        url: "https://www.youtube.com/watch?v=q2mcPR4NLL0"
     },
 ];
 
 
 export const Diapers = () => {
     const navigate = useNavigate();
+
+    //新しいタブで開く
+    const onClickNewWindow = (videoUrl: string) => {
+        window.open(videoUrl, '_blank');
+    }
 
     return (
         <>
@@ -38,12 +43,13 @@ export const Diapers = () => {
             {/* <Youtube videoId="i1LUeyn9Kng" /> */}
 
             {diaperItems.map((item) => (
-                <DiaperDiscription
-                    id={item.id}
-                    imageName={item.imageName}
-                    productName={item.productName}
-                    onClick={() => navigate(item.path)}
-                />
+                <Flex onClick={() => onClickNewWindow(item.url)}>
+                    <DiaperDiscription
+                        id={item.id}
+                        imageName={item.imageName}
+                        productName={item.productName}
+                    />
+                </Flex>
               ))}
 
             {/* <Box w="20vw" m="20px">

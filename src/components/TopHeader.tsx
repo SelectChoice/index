@@ -8,7 +8,7 @@ export const TopHeader = () => {
 
     return (
     <>
-        <Flex as="header" position="fixed" bg="gray.100" top={0} width="full" height="100px" shadow="sm" py={4} px={8} > 
+        <Flex as="header" position="fixed" bg="gray.100" top={0} width="full" height="100px" shadow="sm" py={4} px={4} > 
             <Image sizes="100px" objectFit="cover" src={LogoImage} alt="SelectxChoice Logo" _hover={{ cursor: "pointer", opacity: 0.8 }} onClick={() => navigate("/")}/>
             {/* <Heading size="lg" px={4} py={4} textAlign="center">Select x Choice</Heading> */}
         </Flex>
