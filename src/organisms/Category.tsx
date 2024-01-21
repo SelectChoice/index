@@ -8,7 +8,7 @@ type Props = {
   onClick: (videoUrl: string) => void; //onClickがなくてもOKなので?
 };
 
-// memo化けるする
+// memo化する
 export const Category: FC<Props> = memo((props) => {
   const { id, imageName, categoryName, onClick } = props;
   return (
