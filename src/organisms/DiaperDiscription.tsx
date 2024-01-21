@@ -1,21 +1,16 @@
 import { Box, Stack, Text, Image } from "@chakra-ui/react";
 import { memo, FC } from "react";
 
-import { useNavigate } from "react-router-dom";
-
 type Props = {
   id: number;
   imageName: any; //.pngから取っている画像の名前
-  categoryName: string; //どのカテゴリーかを示す。オムツとかベビーカーとか
-  path: string;
-//   onClick?: () => void;
+  productName: string; //どのカテゴリーかを示す。オムツとかベビーカーとか
+  onClick: (videoUrl: string) => void; //onClickがなくてもOKなので?
 };
 
 // memo化する
-export const Category: FC<Props> = memo((props) => {
-  const navigate = useNavigate();
-
-  const { id, imageName, categoryName, path } = props;
+export const DiaperDiscription: FC<Props> = memo((props) => {
+  const { id, imageName, productName, onClick } = props;
   return (
     <Box
       w="260px"
@@ -25,18 +20,17 @@ export const Category: FC<Props> = memo((props) => {
       shadow="md"
       p={4}
       _hover={{ cursor: "pointer", opacity: 0.8 }}
-      onClick={() => navigate(path)}
     >
       <Stack textAlign="center">
         <Image
           borderRadius="full"
           boxSize="160px"
           src={imageName}
-          alt={categoryName}
+          alt={productName}
           m="auto"
         />
         <Text fontSize="lg" fontWeight="bold">
-          {categoryName}
+          {productName}
         </Text>
         {/* <Text fontSize="sm" color="gray">
           {fullName}

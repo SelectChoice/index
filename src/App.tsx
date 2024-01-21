@@ -18,9 +18,11 @@ import {
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Baby } from "./routes/Baby";
+import { Diapers } from "./routes/Diapers";
 
 import { TopHeader } from "./components/TopHeader";
 import { Home } from "./components/MainPage";
+
 
 function App() {
   return (
@@ -31,8 +33,9 @@ function App() {
         {/* <BrowserRouter> */}
         <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Routes>
-            <Route path={`/`} element={<Home />} />
-            <Route path={`/baby`} element={<Baby />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/baby" element={<Baby />} />
+            <Route path="/baby/diaper" element={<Diapers />} />
           </Routes>
         </BrowserRouter>
       {/* </Flex> */}
