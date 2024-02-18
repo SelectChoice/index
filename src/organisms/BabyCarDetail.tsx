@@ -32,11 +32,11 @@ export const BabyCarDetail: FC<Props> = memo((props) => {
         <Box textAlign="center" fontSize="lg" mt="100px">
             商品説明
         </Box>
-        <ReactPlayer url={descriptionURL} width={"260px"} height={"146.25px"}/>
+        <ReactPlayer url={descriptionURL} width={"300px"} height={"168.75px"}/>
         <Box textAlign="center" fontSize="lg" mt="100px">
             振動検証
         </Box>
-        <ReactPlayer url={vibrationURL} width={"260px"} height={"146.25px"}/>
+        <ReactPlayer url={vibrationURL} width={"300px"} height={"168.75px"}/>
             
         
         <FormControl mt="10px" ml="10px">
