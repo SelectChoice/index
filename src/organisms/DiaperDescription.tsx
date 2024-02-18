@@ -4,13 +4,14 @@ import { memo, FC } from "react";
 type Props = {
   id: number;
   imageName: any; //.pngから取っている画像の名前
-  productName: string; //どのカテゴリーかを示す。オムツとかベビーカーとか
+  productName: string; //商品名
+  brandName: string;
   // onClick: (videoUrl: string) => void; //onClickがなくてもOKなので?
 };
 
 // memo化する
-export const DiaperDiscription: FC<Props> = memo((props) => {
-  const { id, imageName, productName } = props;
+export const DiaperDescription: FC<Props> = memo((props) => {
+  const { id, imageName, productName, brandName } = props;
   return (
     <Box
       w="260px"
@@ -30,7 +31,10 @@ export const DiaperDiscription: FC<Props> = memo((props) => {
           m="auto"
         />
         <Text fontSize="lg" fontWeight="bold">
-          {productName}
+          商品名: {productName}
+        </Text>
+        <Text fontSize="lg" fontWeight="bold">
+          ブランド名: {brandName}
         </Text>
         {/* <Text fontSize="sm" color="gray">
           {fullName}

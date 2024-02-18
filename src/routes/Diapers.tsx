@@ -1,7 +1,7 @@
 import { Box, Flex } from "@chakra-ui/react";
 
 import { useNavigate } from "react-router-dom";
-import { DiaperDiscription } from "../organisms/DiaperDiscription";
+import { DiaperDescription } from "../organisms/DiaperDescription";
 
 import PampersImg from "../images/pampers.jpg";
 import MoonyImg from "../images/moony.jpg";
@@ -15,12 +15,14 @@ const diaperItems = [
         id: 0,
         imageName: PampersImg,
         productName: "Pampers",
+        brandName: "P&G",
         url: "https://www.youtube.com/watch?v=i1LUeyn9Kng"
     },
     {
         id: 1,
         imageName: MoonyImg,
         productName: "Moony",
+        brandName: "ユニ・チャーム",
         url: "https://www.youtube.com/watch?v=q2mcPR4NLL0"
     },
 ];
@@ -43,11 +45,12 @@ export const Diapers = () => {
             {/* <Youtube videoId="i1LUeyn9Kng" /> */}
 
             {diaperItems.map((item) => (
-                <Flex onClick={() => onClickNewWindow(item.url)}>
-                    <DiaperDiscription
+                <Flex onClick={() => onClickNewWindow(`diapers/${item.url}`)}>
+                    <DiaperDescription
                         id={item.id}
                         imageName={item.imageName}
                         productName={item.productName}
+                        brandName={item.brandName}
                     />
                 </Flex>
               ))}

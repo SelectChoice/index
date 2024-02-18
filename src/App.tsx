@@ -19,6 +19,8 @@ import {
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Baby } from "./routes/Baby";
 import { Diapers } from "./routes/Diapers";
+import { BabyCars } from "./routes/BabyCar";
+import { MelioCarbon } from "./routes/BabyCarList/MelioCarbon";
 
 import { TopHeader } from "./components/TopHeader";
 import { Home } from "./components/MainPage";
@@ -36,6 +38,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/baby" element={<Baby />} />
             <Route path="/baby/diaper" element={<Diapers />} />
+            <Route path="/baby/babycar" element={<BabyCars />} />
+            <Route path="/baby/babycar/meliocarbon" element={<MelioCarbon />} />
           </Routes>
         </BrowserRouter>
       {/* </Flex> */}
