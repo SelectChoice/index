@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/index/static/css/main.e6c13ad2.css",
-    "main.js": "/index/static/js/main.76ad606a.js",
+    "main.js": "/index/static/js/main.2e51fad0.js",
     "reactPlayerYouTube.js": "/index/static/js/reactPlayerYouTube.11261ec8.chunk.js",
     "reactPlayerSoundCloud.js": "/index/static/js/reactPlayerSoundCloud.722265b3.chunk.js",
     "reactPlayerVimeo.js": "/index/static/js/reactPlayerVimeo.97b7ae65.chunk.js",
@@ -16,6 +16,7 @@
     "reactPlayerFilePlayer.js": "/index/static/js/reactPlayerFilePlayer.cd923614.chunk.js",
     "reactPlayerPreview.js": "/index/static/js/reactPlayerPreview.20f95011.chunk.js",
     "static/js/787.29d053df.chunk.js": "/index/static/js/787.29d053df.chunk.js",
+    "static/media/meliocarbon.png": "/index/static/media/meliocarbon.862a89906ff61930cc71.png",
     "static/media/babycarirasutoya.png": "/index/static/media/babycarirasutoya.25ecca7a1085b7f96019.png",
     "static/media/omutsuirasutoya.png": "/index/static/media/omutsuirasutoya.ac3bddcd2b703ff817ba.png",
     "static/media/moony.jpg": "/index/static/media/moony.39b46517ef5798212bc4.jpg",
@@ -23,7 +24,7 @@
     "static/media/pampers.jpg": "/index/static/media/pampers.20a0a3c7d2f3d0398670.jpg",
     "index.html": "/index/index.html",
     "main.e6c13ad2.css.map": "/index/static/css/main.e6c13ad2.css.map",
-    "main.76ad606a.js.map": "/index/static/js/main.76ad606a.js.map",
+    "main.2e51fad0.js.map": "/index/static/js/main.2e51fad0.js.map",
     "reactPlayerYouTube.11261ec8.chunk.js.map": "/index/static/js/reactPlayerYouTube.11261ec8.chunk.js.map",
     "reactPlayerSoundCloud.722265b3.chunk.js.map": "/index/static/js/reactPlayerSoundCloud.722265b3.chunk.js.map",
     "reactPlayerVimeo.97b7ae65.chunk.js.map": "/index/static/js/reactPlayerVimeo.97b7ae65.chunk.js.map",
@@ -41,6 +42,6 @@
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.76ad606a.js"
+    "static/js/main.2e51fad0.js"
   ]
 }
